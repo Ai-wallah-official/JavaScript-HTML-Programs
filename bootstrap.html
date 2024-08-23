@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        .images{
+            height: 68vh;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+ <div class="navbaar">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+ </div>     
+ <div>
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img src="https://source.unsplash.com/random/?fruit" class="d-block w-100 images" alt="https://source.unsplash.com/random">
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="https://source.unsplash.com/user/wsanter" class="d-block w-100 images" alt="https://source.unsplash.com/random">
+          </div>
+          <div class="carousel-item">
+            <img src="https://source.unsplash.com/random" class="d-block w-100 images" alt="https://source.unsplash.com/random">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <div class="contact">
+        <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+      </div>
+    <div class="d-flex flex-wrap">
+      <div class="cardSystem">
+        <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+      </div>
+      <div class="cardSystem">
+        <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+      </div>
+      <div class="cardSystem">
+        <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+      </div>
+      <div class="cardSystem">
+        <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+      </div>
+      <div class="cardSystem">
+        <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+      </div>
+      <div class="cardSystem">
+        <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="about">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur asperiores saepe neque repellat esse, odio delectus labore reprehenderit natus non atque quia, fuga illo assumenda pariatur est odit. Quisquam odit nihil quibusdam a asperiores, repellendus fuga explicabo itaque, minima consectetur maiores doloremque exercitationem veniam? Illum similique nulla, fugit unde quis voluptas optio quisquam reiciendis, laborum repellat iusto officiis consequatur iste maiores harum impedit voluptatum non eius et ipsam ullam. Fuga enim, consequatur quos dolorem, voluptatem aliquid eos iste facere ea perferendis magni, tempora cupiditate veritatis incidunt natus atque voluptatibus labore? Porro, explicabo ratione, voluptas minima cupiditate dolores voluptatem rem dignissimos aut eligendi omnis placeat id aspernatur. Ex minus ipsa commodi quas molestias officia voluptate suscipit, tenetur quaerat reiciendis error saepe, delectus corporis mollitia dolores, vitae doloribus odio asperiores iste quis blanditiis repudiandae obcaecati. Reiciendis autem voluptates asperiores excepturi omnis quaerat nihil! Unde adipisci, hic odit at magnam nisi iusto obcaecati fugiat assumenda culpa saepe porro aperiam velit accusantium ea aliquid labore sed omnis quos quae voluptatibus a? Impedit porro voluptate iste, repellat molestiae molestias voluptatum voluptatem a officia quos velit ut, autem, maiores quidem suscipit quibusdam recusandae. A explicabo, sit illo non ipsum quae odio numquam fugiat provident dolores. Reiciendis, voluptas doloribus delectus at placeat eligendi veniam consequuntur ipsam ipsum laboriosam officia ullam veritatis odio et quibusdam non distinctio quis corporis sapiente dolor consectetur accusantium laudantium eveniet. Voluptates harum illum officia, autem ullam laudantium atque nulla dolorem! Repellendus, est praesentium? Deleniti dolorem, praesentium adipisci eaque delectus odio nobis eos odit quidem sit rerum ratione obcaecati placeat, nam rem quia? Cupiditate ad cumque earum quod placeat eveniet dolores error. Soluta unde cumque illum! Iusto nobis perspiciatis dignissimos provident quisquam minima eveniet sint soluta, officiis id alias ad exercitationem pariatur laudantium laboriosam at excepturi dolorem voluptatibus animi porro dolores delectus! Consequuntur neque quos fugiat qui veniam ex quae soluta aspernatur doloremque provident maiores est molestiae dolorum accusantium eligendi possimus obcaecati eius, consequatur delectus nihil sapiente. Illum earum possimus quidem eligendi fugiat adipisci dolores animi pariatur sint natus enim minus, rerum sed quam, assumenda at voluptate repudiandae reiciendis eveniet similique? Nihil fuga nostrum similique iste impedit, facere aut neque. Fugiat nemo qui voluptates ullam obcaecati modi quia corrupti adipisci, cum rem fuga minima, quos vel nam harum eos porro dolor hic eligendi nostrum saepe cumque optio! Veniam distinctio officiis saepe incidunt perspiciatis aliquid exercitationem fuga, sapiente illo quod sunt eius nostrum odio sint eaque optio minima ab a sit aut? Modi fugit excepturi optio dolorem eius harum tempora? Nihil nisi molestiae quis numquam ex vero nemo cupiditate vitae, labore, atque, aliquid maiores deleniti perspiciatis perferendis! Voluptates illo veniam, molestiae nisi praesentium aperiam velit quisquam doloribus, adipisci impedit laudantium voluptas! Autem, numquam! Quos dolores, rerum cum temporibus non soluta voluptatem ullam similique maxime laborum corrupti quam fuga, aliquid molestiae ratione necessitatibus. Aliquam commodi provident, totam laborum magnam corrupti quisquam itaque expedita corporis sit quidem adipisci debitis unde temporibus harum iure quod quaerat quas error sint assumenda consectetur labore rem! Laudantium eaque deserunt alias consequatur.
+    </div>
+ </main>
+ <footer  class="footer bottom text-center">
+   <div> &copy copyrights all reserve</div>
+</footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

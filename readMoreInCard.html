@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read more ads</title>
+    <style>
+        div{
+        display: grid;
+        place-content: center;
+            border: 1px solid;
+            height: 600px;
+        }
+        p{
+            padding: 12px;
+            border: 2px solid red;
+            width: 200px;
+            height: 100px;
+        }
+        button{
+            color: white;
+            background: rgb(30, 30, 239);
+            padding: 5px;
+            outline: 2px solid green;
+            border: 2px solid green;
+        }
+        p{
+            white-space: nowrap; /* for no wrap text*/
+            overflow: hidden;
+            text-overflow:ellipsis;
+        }
+        .per{
+            white-space:wrap;
+            overflow: auto;
+            text-overflow:clip;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p class="pera">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis reiciendis dignissimos magnam odit quibusdam deleniti eum neque asperiores rem, ex, sunt incidunt laboriosam tempora error, ullam cumque commodi beatae. Nobis.
+       </p>
+       <button onclick="readMore()">Read More?</button>
+    </div>
+    <script>
+         let pera = document.querySelector(".pera")
+        function readMore(){
+           pera.classList.add("per")
+        }
+    </script>
+</body>
+</html>

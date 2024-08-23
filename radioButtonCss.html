@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html showCase</title>
+    <style>
+        body{
+            display: grid;
+            place-items: center;
+            transform: translateY(200px);
+        }
+        div{
+            text-align: center;
+                width: 50%;
+            border: 1px solid;
+        }
+#red:checked{
+    accent-color:  red;
+}
+    
+#green:checked{
+    accent-color: green;
+}
+   
+#blue:checked{
+    accent-color:  blue;
+}
+    </style>
+</head>
+<body>
+    <h1>color change </h1>
+    <div>
+        <input type="radio" name="color" id="red">Red <br>
+        <input type="radio" name="color" id="green">Green <br>
+        <input type="radio" name="color" id="blue">Blue
+    </div>
+</body>
+</html>

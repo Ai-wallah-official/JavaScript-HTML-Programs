@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Sasta Chat-Box</title>
+    <style>
+        .container {
+            width: 80vw;
+            height: 600px;
+            border: 1px solid;
+            display: grid;
+            place-content: center;
+        }
+
+        .box {
+            border: 2px solid rgb(61, 215, 61);
+            background-color: rgba(121, 236, 113, 0.52);
+            height: 250px;
+            width: 250px;
+        }
+
+        button {
+            width: 80px;
+            transform: translate(90px);
+            padding: 8px;
+            color: white;
+            background-color: #07d981;
+        }
+        input{
+            height: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="container">
+        <h1>Sasta Chat Send</h1>
+        <div class="box">
+            <h4 id="text"></h4>
+        </div> <br>
+        <input type="text" id="newText" placeholder="Enter Message.."> <br>
+        <button class="send-btn">Send</button>
+    </div>
+    <script>
+        document.querySelector(".send-btn").addEventListener("click",()=>{
+            if(newText.value!==null)
+            {
+                text.innerHTML+=text.innerHTML ? "<hr>"+newText.value : newText.value
+                newText.value="";
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>copy button</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        .box {
+            display: grid;
+            place-content: center;
+
+        }
+
+        textarea {
+            width: 80vw;
+            height: 600px;
+        }
+
+        .cpy , .cls , .paste{
+            font-size: 40px;
+            transform: translate(800px, -590px);
+            width: 1em;
+            border-radius: 20px;
+            background-color: #fff;
+            
+        }
+        .cpy:hover , .cls:hover , .paste:hover{
+            background-color: #847f7f6b;
+        }
+        #copyArea{
+            transform: translateY(-100px);
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h1>Likh kar copy karr Bhai</h1>
+        <textarea name="" id="textarea" placeholder="Enter Text for copy"></textarea>
+        <i class="ri-file-copy-line cpy"></i> <br>
+        <i class="ri-close-line cls"></i><br>
+        <i class="ri-clipboard-line paste"></i>
+        
+        <span id="copyArea"></span>
+    </div>
+    <script>
+        let text =document.getElementById("textarea")
+      /*  document.querySelector(".cpy").addEventListener("click",()=>{
+            text.select();
+           document.execCommand("copy");
+           //copyArea.innerHTML = "Text Copy Succesfully"
+           alert("Text Copy Succesfully")
+        }) */ 
+        //OR
+        document.querySelector(".cpy").addEventListener("click",()=>{
+            navigator.clipboard.writeText(text.value) //another method
+            copyArea.innerHTML = "Ho gya Copy"
+            alert("Copy from navigator api")
+        })
+        document.querySelector(".cls").addEventListener("click",()=>{
+            text.value=""
+            copyArea.innerHTML = "Clear Done"
+        })
+        document.querySelector(".paste").addEventListener("click",async()=>{
+            navigator.clipboard.writeText("");
+            const pasteText = await navigator.clipboard.readText();
+            console.log("pasteText")
+            text.value+=pasteText;
+        })
+    </script>
+</body>
+
+</html>

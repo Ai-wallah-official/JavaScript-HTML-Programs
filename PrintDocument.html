@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>print Documnet</title>
+    <style>
+        body{
+            margin: 50px;
+        }
+        h1{
+            color: red;
+        }
+        button{
+            background-color: #56ee10;
+            padding: 6px;
+            width: 60px;
+        }
+        @media print{
+            body *{
+                visibility: hidden;
+
+            }
+            .item , .item * {
+                visibility: visible;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Click on Button to print </h1>
+    <p class="item">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit commodi explicabo quidem, tenetur natus aut fugiat aspernatur et ab! Vel, assumenda ea laborum adipisci aspernatur alias, ratione error aliquid incidunt voluptate perspiciatis deserunt libero voluptates dolorum unde maiores id nobis quaerat amet aut laboriosam vitae corrupti. Sed ratione dolores architecto!
+    </p>
+    <button id="print-btn" onclick="print()">Print</button>
+   
+</body>
+</html>

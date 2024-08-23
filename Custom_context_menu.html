@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>custom menu</title>
+<style>
+    body{
+        margin: 40px;
+    }
+    ul{
+        list-style-type: none;
+        display: none;
+        position: absolute;
+        border: 1px solid;
+        background-color: #0a0a0ab1;
+        color: white;
+    }
+    li{
+        margin-bottom: 2px;
+        margin-right: 35px;
+        padding: 5px;
+    }
+</style>
+</head>
+<body>
+    <div class="box">
+    <h2>Custom Context-menu</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex fugiat delectus esse eius ipsum eveniet reiciendis velit, hic assumenda odio placeat ducimus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, libero?
+
+    </p>
+    <ul id="list">
+        <li>Copy </li>
+        <li >Paste </li>
+        <li>Print</li>
+        <li>Share</li>
+    </ul>
+</div>
+    <script>
+        document.addEventListener("contextmenu",(e)=>{
+            e.preventDefault();
+            list.style.display = "block";
+            list.style.left = e.pageX+"px"
+            list.style.top = e.pageY+"px"
+
+        })
+        document.addEventListener("click",()=>{
+            list.style.display = "none";
+
+        })
+      
+    </script>
+</body>
+</html>

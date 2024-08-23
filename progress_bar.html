@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>progress-bar</title>
+    <style>
+        body{
+            margin: 40px;
+        }
+        progress{
+                    height: 20px;
+                    width: 250px;
+                    border-radius: 1px; /*no matter just apply any pixel*/
+            }
+            progress::-webkit-progress-value{ /*for inner changes*/
+                    background-color: #26e40d;
+
+            }
+            progress::-webkit-progress-bar{
+                background-color: #c4c1c1;
+            }
+    </style>
+    
+</head>
+<!-- not in Emmet-->
+    <progress value="20" max="100">
+    </progress> 
+  
+</body>
+</html>

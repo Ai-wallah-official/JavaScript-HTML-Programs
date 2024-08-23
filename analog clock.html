@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('CSS\\bg_image.jpg');
+        }
+
+        .card {
+            width: 270px;
+            height: 350px;
+            background-color: #272c0e;
+
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .card:hover {
+            box-shadow: 20px 30px 35px rgba(32, 32, 32, 0.4);
+            transform: scale(1.01);
+
+
+        }
+
+        #clock {
+            width: 200px;
+            height: 200px;
+            border: 5px solid #7ab356;
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .hand {
+            position: absolute;
+            background-color: #887272;
+            transform-origin: 50% 100%;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%);
+        }
+
+        #hourHand {
+            width: 8px;
+            height: 60px;
+            margin-left: -4px;
+            margin-top: -60px;
+        }
+
+        #minuteHand {
+            width: 4px;
+            height: 80px;
+            margin-left: -2px;
+            margin-top: -80px;
+        }
+
+        #secondHand {
+            width: 2px;
+            height: 90px;
+            background-color: red;
+            margin-left: -1px;
+            margin-top: -90px;
+        }
+
+        .hour-number {
+            position: absolute;
+            font-size: 16px;
+            font-weight: bold;
+            left: 50%;
+            top: 36.5%;
+            transform-origin: 50% 100%;
+            padding: 40%;
+            color: rgb(185, 158, 61);
+        }
+
+        h3 {
+            position: absolute;
+            bottom: 75%;
+            font-size: 32px;
+            color: rgb(185, 61, 84);
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <h3>Analog Clock</h3>
+        <div id="clock">
+            <div id="hourHand" class="hand"></div>
+            <div id="minuteHand" class="hand"></div>
+            <div id="secondHand" class="hand"></div>
+
+            <!-- Hour numbers -->
+            <div class="hour-number" style="transform: translate(-50%, -85%) rotate(30deg);">1</div>
+            <div class="hour-number" style="transform: translate(-50%, -85%) rotate(60deg);">2</div>
+            <div class="hour-number" style="transform: translate(-50%, -85%) rotate(90deg);">3</div>
+            <div class="hour-number" style="transform: translate(-50%, -85%) rotate(120deg);">4</div>
+            <div class="hour-number" style="transform: translate(-50%, -85%) rotate(150deg);">5</div>
+            <div class="hour-number" style="transform: translate(-50%, -85%) rotate(180deg);">6</div>
+            <div class="hour-number" style="transform: translate(-50%, -85%) rotate(210deg);">7</div>
+            <div class="hour-number" style="transform: translate(-50%, -85%) rotate(240deg);">8</div>
+            <div class="hour-number" style="transform: translate(-50%, -85%) rotate(270deg);">9</div>
+            <div class="hour-number" style="transform: translate(-50%, -85%) rotate(300deg);">10</div>
+            <div class="hour-number" style="transform: translate(-50%, -85%) rotate(330deg);">11</div>
+            <div class="hour-number" style="transform: translate(-50%, -85%) rotate(360deg);">12</div>
+        </div>
+        <audio id="tickingSound" preload="auto" src="http://cd.textfiles.com/10000soundssongs/WAV/TIC1.WAV"></audio>
+    </div>
+    <script>
+        const tickingSound = document.getElementById('tickingSound');
+        function updateClock() {
+            const now = new Date();
+
+            const hours = now.getHours();
+            const minutes = now.getMinutes();
+            const seconds = now.getSeconds();
+
+            const hourDeg = (hours % 12 + minutes / 60) * 30;
+            const minuteDeg = (minutes + seconds / 60) * 6;
+            const secondDeg = seconds * 6;
+
+            document.getElementById('hourHand').style.transform = `rotate(${hourDeg}deg)`;
+            document.getElementById('minuteHand').style.transform = `rotate(${minuteDeg}deg)`;
+            document.getElementById('secondHand').style.transform = `rotate(${secondDeg}deg)`;
+            tickingSound.currentTime = 0;
+            tickingSound.play();
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock(); 
+    </script>
+</body>
+
+</html>

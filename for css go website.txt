@@ -1,0 +1,21 @@
+https://css-loaders.com/
+
+website: https://bennettfeely.com/clippy/ for shape 
+for css tools https://10015.io/
+
+if we want to fast work our website then use in image att is loading ="lazy" check  in inspet network ctrl+shift+i
+if we want to check sppelling in input or textarea use att spellcheck="true"
+if you want to edit live your text or context  contenteditable="true" 
+if we want to choose specific file input use this { HTML <input> accept Attribute Syntax:  
+<input accept = "file_extension | audio/* | video/* | image/* | media_type">
+
+HTML <input> accept Attribute Attribute Values: 
+file_extension: It Specify the file extension(s) like .gif, .jpg, .png, .doc) the user can pick from.
+audio/*: The user can pick all sound files.
+video/*: The user can pick all video files.
+image/*: A valid media type, with no parameters. Look at IANA Media Types for a complete list of standard media types
+media_type: A valid media type without parameters.
+}
+
+best way to use icon => got this website: https://remixicon.com/ then click on github copy cdn link and use from website free
+cdn is:     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" >

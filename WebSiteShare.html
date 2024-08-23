@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vishal bhai share-Button</title>
+    <style>
+        body {
+            margin: 50px;
+        }
+
+        h2 {
+            color: rgb(161, 75, 5);
+        }
+        #share{
+            display: block;
+            margin: 10px auto;
+            background-color: #5ee631;
+            color: rgb(0, 0, 0);
+            padding: 6px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h2> any heading..........</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt consectetur aspernatur, nisi debitis
+            praesentium quo dicta dolorum commodi explicabo possimus sed deserunt perferendis minus doloribus quis.
+            Nihil error debitis numquam autem! Delectus sunt commodi veritatis inventore modi quas, provident accusamus
+            possimus in molestias numquam harum alias ullam accusantium natus quaerat?</p>
+
+    </div>
+    <button id="share">Share</button>
+    <script>
+        async function sharePage() {
+            await navigator.share({
+                title: document.title,
+                url: window.location.href
+
+            });
+        }
+        document.getElementById("share").addEventListener("click", sharePage)
+    </script>
+</body>
+
+</html>

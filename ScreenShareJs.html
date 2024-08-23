@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share your screen</title>
+    <style>
+        .btn {
+            border: none;
+            outline: 1px solid rgb(11, 159, 228);
+            margin: 10px 10px;
+            padding: 6px;
+            border-radius: 8px;
+        }
+
+        .btn:hover {
+            background: rgb(151, 196, 214);
+            color: rgb(7, 7, 7);
+            border: 1px solid black;
+            outline: none;
+        }
+
+        .box {
+            width: 400px;
+            height: 300px;
+            background: grey;
+        
+        }
+    
+    </style>
+</head>
+
+<body>
+    <div class="con">
+    <div class="box">
+        <video id="video" autoplay playsinline muted></video>
+        </div>
+        <div class="buttonn">
+            <button class="btn" id="start"> Start Screen Sharing</button>
+            <button class="btn" id="stop"> Stop</button>
+            </div></div>
+            <script>
+                const videoElem = document.getElementById("video");
+                const startElem = document.getElementById("start");
+                const stopElem = document.getElementById("stop");
+                // Options for getDisplayMedia()
+                var displayMediaOptions = {
+                    video: {
+                        cursor: "always",
+                        height: 1000,
+                        width: 1200
+                    },
+                    audio: false
+                };
+                // Set event listeners for the start and stop buttons
+                startElem.addEventListener("click", function (evt) {
+                    startCapture();
+                }, false);
+                // Stop the screen capture
+                stopElem.addEventListener("click", function (evt) {
+                    stopCapture();
+                }, false);
+                // Start the screen capture
+                async function startCapture() {
+                    try {
+                        videoElem.srcObject = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
+                        dumpOptionsInfo();
+                    } catch (err) {
+                        // Handle error
+                        console.error("Error: " + err);
+                    }
+                }
+                // Stop the stream
+                function stopCapture(evt) {
+                    let tracks = videoElem.srcObject.getTracks();
+                    tracks.forEach(track => track.stop());
+                    videoElem.srcObject = null;
+                }
+                // Dump the available media track capabilities to the console
+                function dumpOptionsInfo() {
+                    const videoTrack = videoElem.srcObject.getVideoTracks()[0];
+                    console.info("Track settings:");
+                    console.info(JSON.stringify(videoTrack.getSettings(), null, 2));
+                    console.info("Track constraints:");
+                    console.info(JSON.stringify(videoTrack.getConstraints(), null, 2));
+                }
+            </script>
+</body>
+
+</html>
